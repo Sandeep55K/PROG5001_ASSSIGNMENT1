@@ -16,4 +16,20 @@ public class Main {
         System.out.println("The Highest marks is : " + marks[marks.length - 1]);
         System.out.println("The Standard Deviation is : " + calcSD(marks));
     }
+    public static void input(double[] marks) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter title of the Assignment");
+        assignmentName = sc.next();
+        System.out.println("Now Please Enter the Marks of the Students");
+        for (int index = 0; index < marks.length; index++) {
+            System.out.println("Enter marks of Student no. :" + (index + 1));
+            double number = 0.0;
+            boolean check = false;
+            do {
+                number = sc.nextDouble();
+                check = checkValidity(number);        
+            } while (check != true);
+            marks[index] = number;
+        }
+    }
 }
