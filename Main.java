@@ -32,4 +32,17 @@ public class Main {
             marks[index] = number;
         }
     }
+    public static void sortmarks(double[] marks) {
+        System.out.println("sorting the input marks:");
+        double temp = 0.0;
+        for (int i = 0; i < marks.length; i++) {
+            for (int j = i + 1; j < marks.length; j++) {
+                if (marks[i] > marks[j]) {
+                    temp = marks[i];
+                    marks[i] = marks[j];
+                    marks[j] = temp;
+                }
+            }
+        }
+    }
 }
