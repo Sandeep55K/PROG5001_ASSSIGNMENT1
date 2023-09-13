@@ -20,9 +20,15 @@ public class Main {
         }
         // This method is to sort the marks so the highest and lowest calcuations
         sortmarks(marks);
+        
+        System.out.println("---");
+        
         System.out.println("The Lowest marks is : " + marks[0]);
         System.out.println("The Highest marks is : " + marks[marks.length - 1]);
-        // System.out.println("The Standard Deviation is : " + calculate_std_deviation(marks));
+        
+        System.out.println("---");
+        
+        System.out.println("The Standard Deviation is : " + calculate_std_deviation(marks));
     }
     
     // The input method which takes marks
