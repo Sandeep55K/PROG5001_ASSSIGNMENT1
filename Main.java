@@ -60,6 +60,7 @@ public class Main {
         }
     }
 
+    // This method is to calculate mean of the marks 
     public static double calculate_mean(double[] marks) {
         System.out.println("Calculating Mean:");
         double sum = 0.0;
@@ -70,13 +71,16 @@ public class Main {
         return sum / marks.length;
     }
 
+    // This method is to calculate Standard Deviation of the Input Data
     public static double calculate_std_deviation(double[] marks) {
         System.out.println("Calculating Standard Deviation");
         double mean = calculate_mean(marks);
         double temp = 0.0;
+        // Refering to java.lang.Math.pow(a,b)
         for (double mark: marks) {
             temp = temp + Math.pow(mark - mean, 2);
         }
+        // Refering to java.lang.Math.sqrt()
         return Math.sqrt(temp / marks.length);
     }
 }
