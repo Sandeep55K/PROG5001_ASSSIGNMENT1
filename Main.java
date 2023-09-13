@@ -2,6 +2,10 @@
  * @author (Sandeep Kaur)
  * @ID (24066442)
  */
+
+import java.util.Scanner;
+import java.lang.Math;
+
 public class Main {
     public static String assignmentName;
 
