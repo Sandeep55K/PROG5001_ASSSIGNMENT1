@@ -14,7 +14,7 @@ public class Main {
         sortmarks(marks);
         System.out.println("The Lowest marks is : " + marks[0]);
         System.out.println("The Highest marks is : " + marks[marks.length - 1]);
-        System.out.println("The Standard Deviation is : " + calcSD(marks));
+        // System.out.println("The Standard Deviation is : " + calcSD(marks));
     }
     public static void input(double[] marks) {
         Scanner sc = new Scanner(System.in);
