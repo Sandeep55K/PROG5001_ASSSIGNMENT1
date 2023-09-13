@@ -60,6 +60,16 @@ public class Main {
         }
     }
 
+    public static double calculate_mean(double[] marks) {
+        System.out.println("Calculating Mean:");
+        double sum = 0.0;
+        for (int index = 0; index < marks.length; index++) {
+            sum = sum + marks[index];
+        }
+        System.out.println("The mean is : " + sum / marks.length);
+        return sum / marks.length;
+    }
+
     public static double calculate_std_deviation(double[] marks) {
         System.out.println("Calculating Standard Deviation");
         double mean = calculate_mean(marks);
