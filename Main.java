@@ -27,7 +27,12 @@ public class Main {
             boolean check = false;
             do {
                 number = sc.nextDouble();
-                check = checkValidity(number);        
+                if (number < 0 || number > 30) {
+                    System.out.println("Entry is Invalid: Please Input a valid Number (Marks can be between 0 - 30.0)");
+                    check = false;
+                } else {
+                    check = true;
+                }     
             } while (check != true);
             marks[index] = number;
         }
