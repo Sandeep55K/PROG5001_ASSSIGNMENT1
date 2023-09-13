@@ -18,7 +18,7 @@ public class Main {
         sortmarks(marks);
         System.out.println("The Lowest marks is : " + marks[0]);
         System.out.println("The Highest marks is : " + marks[marks.length - 1]);
-        // System.out.println("The Standard Deviation is : " + calcSD(marks));
+        // System.out.println("The Standard Deviation is : " + calculate_std_deviation(marks));
     }
     
     // The input method which takes marks
@@ -58,5 +58,15 @@ public class Main {
                 }
             }
         }
+    }
+
+    public static double calculate_std_deviation(double[] marks) {
+        System.out.println("Calculating Standard Deviation");
+        double mean = calculate_mean(marks);
+        double temp = 0.0;
+        for (double mark: marks) {
+            temp = temp + Math.pow(mark - mean, 2);
+        }
+        return Math.sqrt(temp / marks.length);
     }
 }
